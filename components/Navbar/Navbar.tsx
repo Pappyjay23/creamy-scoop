@@ -80,15 +80,15 @@ const Navbar = () => {
 						className='opacity-0'
 					/>
 					<div className='flex flex-col logoName opacity-0'>
-						<span className='font-bold leading-4 tracking-wider font-pacifico'>
+						<span className='text-sm lg:text-base font-bold leading-4 tracking-wider font-fredericka'>
 							Creamy
 						</span>
-						<span className='font-bold leading-4 tracking-wider font-pacifico'>
+						<span className='text-sm lg:text-base font-bold leading-4 tracking-wider font-fredericka'>
 							Scoop
 						</span>
 					</div>
 				</a>
-				<div className='flex gap-4 items-center text-sm nav-links-group overflow-hidden'>
+				<div className='flex gap-4 items-center text-xs lg:text-sm nav-links-group overflow-hidden'>
 					<a className='opacity-0' href='#know-us'>
 						Know us
 					</a>

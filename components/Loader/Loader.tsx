@@ -13,7 +13,7 @@ const Loader = ({
 			onComplete: () => {
 				gsap.to("#loader .logoGroup", {
 					opacity: 0,
-					duration: 1,
+					duration: 1.5,
 					onComplete: () => setIsLoading(false),
 				});
 			},
@@ -22,11 +22,11 @@ const Loader = ({
 		tl.fromTo(
 			"#loader #logo",
 			{ scale: 0, rotate: 0, opacity: 0 },
-			{ scale: 1, opacity: 1, rotate: 360, duration: 0.7, ease: "circ.in" }
+			{ scale: 1, opacity: 1, rotate: 360, duration: 1, ease: "circ.in" }
 		).fromTo(
 			".logoName",
 			{ opacity: 0, y: 20 },
-			{ opacity: 1, y: 0, duration: 0.7, ease: "back.inOut" }
+			{ opacity: 1, y: 0, duration: 1, ease: "back.inOut" }
 		);
 	});
 
@@ -48,10 +48,10 @@ const Loader = ({
 						className='opacity-0'
 					/>
 					<div className='flex flex-col gap-2 text-white -ml-2 logoName opacity-0'>
-						<p className='font-bold tracking-wider font-pacifico text-3xl leading-[2]'>
+						<p className='font-bold tracking-wider font-fredericka text-3xl leading-[2]'>
 							Creamy
 						</p>
-						<p className='font-bold tracking-wider font-pacifico text-3xl leading-[2] mt-[-30px]'>
+						<p className='font-bold tracking-wider font-fredericka text-3xl leading-[2] mt-[-30px]'>
 							Scoop
 						</p>
 					</div>
