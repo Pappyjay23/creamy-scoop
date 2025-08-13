@@ -89,8 +89,8 @@ const Navbar = () => {
 					</div>
 				</a>
 				<div className='flex gap-4 items-center text-xs lg:text-sm nav-links-group overflow-hidden'>
-					<a className='opacity-0' href='#know-us'>
-						Know us
+					<a className='opacity-0' href='#our-story'>
+						Our Story
 					</a>
 					<a className='opacity-0' href='#'>
 						Our tastes
