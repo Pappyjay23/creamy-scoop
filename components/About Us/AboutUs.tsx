@@ -47,8 +47,8 @@ const AboutUs = () => {
 		<div id='our-story' className='bg-[#190506] py-8'>
 			<div className='container'>
 				<div className='flex flex-col items-center py-8'>
-					<p className='text-xl font-fredericka'>Our story</p>
-					<p className='text-[#E4C2FB] text-3xl font-fredericka'>CreamyScoop</p>
+					<p className='text-xl font-fredericka drop-shadow-md'>Our story</p>
+					<p className='text-[#E4C2FB] text-3xl font-fredericka drop-shadow-md'>CreamyScoop</p>
 				</div>
 				<div className='flex flex-col lg:flex-row justify-center items-center gap-4'>
 					<p className='w-full lg:w-[50%] font-fredericka leading-[40px] description overflow-hidden'>

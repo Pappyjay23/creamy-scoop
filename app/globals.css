@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-	--background: #000;
+	--background: #190506;
 	--foreground: #fff;
 	--font-poppins: "Poppins", sans-serif;
 }
@@ -25,7 +25,7 @@
 }
 
 body {
-	background: var(--background);
+	background-color: var(--background);
 	color: var(--foreground);
 	font-family: var(--font-poppins);
 	height: 100vh;

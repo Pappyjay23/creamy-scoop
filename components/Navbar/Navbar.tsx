@@ -16,13 +16,15 @@ const Navbar = () => {
 				start: "30px top",
 				onEnter: () => {
 					gsap.to("#navbar", {
-						backgroundColor: "rgba(0,0,0,0.15)",
 						backdropFilter: "blur(10px)",
+						background:
+							"linear-gradient(to right, rgba(59, 130, 246, 0.1), rgba(168, 85, 247, 0.1))",
+						boxShadow: "inset 3px 3px 10px rgba(0,0,0,0.2)",
 					});
 				},
 				onLeaveBack: () => {
 					gsap.to("#navbar", {
-						backgroundColor: "transparent",
+						background: "rgba(0,0,0,0.15)",
 						backdropFilter: "blur(0px)",
 					});
 				},
@@ -68,7 +70,7 @@ const Navbar = () => {
 		);
 	});
 	return (
-		<nav id='navbar' className='fixed top-0 bg-transparent z-10 w-full'>
+		<nav id='navbar' className='fixed top-0 bg-transparent z-50 w-full'>
 			<div className='container py-4 flex items-center justify-between'>
 				<a href='#' className='flex items-center gap-0'>
 					<Image
@@ -92,8 +94,8 @@ const Navbar = () => {
 					<a className='opacity-0' href='#our-story'>
 						Our Story
 					</a>
-					<a className='opacity-0' href='#'>
-						Our tastes
+					<a className='opacity-0' href='#our-tastes'>
+						Our Tastes
 					</a>
 				</div>
 			</div>

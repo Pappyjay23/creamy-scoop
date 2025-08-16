@@ -7,6 +7,7 @@ import React, { useState } from "react";
 import { ScrollTrigger } from "gsap/all";
 import gsap from "gsap";
 import AboutUs from "@/components/About Us/AboutUs";
+import OurTaste from "@/components/Our Tastes/OurTaste";
 
 const App = () => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -20,6 +21,7 @@ const App = () => {
 			<Navbar />
 			<Hero />
 			<AboutUs />
+			<OurTaste />
 		</div>
 	);
 };

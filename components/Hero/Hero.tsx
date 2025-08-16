@@ -39,19 +39,19 @@ const heroIceCreams = [
 	{
 		image: HeroIceCream2,
 		alt: "ice cream",
-		price: "4.99",
+		price: "6.99",
 		name: "Chocolate Soft Cream",
 	},
 	{
 		image: HeroIceCream3,
 		alt: "ice cream",
-		price: "4.99",
+		price: "8.99",
 		name: "Blackberry Cone Twist",
 	},
 	{
 		image: HeroIceCream4,
 		alt: "ice cream",
-		price: "4.99",
+		price: "10.99",
 		name: "Strawberry Sprinkle Cone",
 	},
 ];
@@ -67,7 +67,7 @@ const Hero = () => {
 				{ backgroundPosition: "center 0%" },
 				{
 					backgroundPosition: "center 50%",
-					duration: 1,
+					duration: 1.5,
 					ease: "bounce.out",
 				}
 			)
