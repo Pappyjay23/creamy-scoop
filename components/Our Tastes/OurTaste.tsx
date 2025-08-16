@@ -138,7 +138,6 @@ const OurTaste = () => {
 		],
 		[]
 	);
-	const [sectionBackground, setSectionBackground] = useState(backgrounds[0]);
 	const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
 	useEffect(() => {
@@ -146,7 +145,6 @@ const OurTaste = () => {
 			setCurrentImageIndex((prevIndex) =>
 				prevIndex === backgrounds.length - 1 ? 0 : prevIndex + 1
 			);
-			setSectionBackground(backgrounds[currentImageIndex]);
 		}, 3000);
 
 		return () => clearInterval(interval);
@@ -155,13 +153,13 @@ const OurTaste = () => {
 	return (
 		<div
 			id='our-tastes'
-			className='bg-[#190506] pt-12 pb-8 min-h-screen relative overflow-hidden'>
+			className='bg-[#190506] min-h-screen py-12 relative overflow-hidden'>
 			<div className='container z-30 relative'>
-				<div className='flex flex-col items-center py-8'>
+				<div className='flex flex-col items-center text-center py-8'>
 					<p className='text-xl font-fredericka text-[#ffffff] drop-shadow-md'>
 						Our tastes
 					</p>
-					<p className='text-[#E4C2FB] text-3xl font-fredericka font-medium drop-shadow-lg'>
+					<p className='text-[#E4C2FB] text-2xl md:text-3xl font-fredericka font-medium drop-shadow-lg'>
 						Special Offers
 					</p>
 				</div>
