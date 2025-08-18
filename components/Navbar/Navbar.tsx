@@ -143,7 +143,13 @@ const Navbar = () => {
 		<>
 			<nav id='navbar' className='fixed top-0 bg-transparent z-50 w-full'>
 				<div className='container py-4 flex items-center justify-between'>
-					<a href='#' className='flex items-center gap-0'>
+					<Link
+						to='hero'
+						smooth={true}
+						duration={500}
+						offset={-50}
+						spy={true}
+						className='flex items-center gap-0 cursor-pointer'>
 						<Image
 							src={Logo}
 							alt='logo'
@@ -160,7 +166,7 @@ const Navbar = () => {
 								Scoop
 							</span>
 						</div>
-					</a>
+					</Link>
 					<div className='flex gap-4 items-center text-xs lg:text-sm nav-links-group overflow-hidden'>
 						{navLinks.map((link, index) => (
 							<Link
