@@ -149,7 +149,7 @@ const FAQs = () => {
 					))}
 				</div>
 			</div>
-			<div className='absolute bottom-0 left-0 z-30 p-4 flex  justify-center items-center w-full text-xs'>
+			<div className='absolute bottom-0 left-0 z-30 p-4 flex  justify-center items-center w-full text-xs text-center'>
 				<p>© 2025 Creamy Scoop — Sharing happiness, one scoop at a time.</p>
 			</div>
 			<div className='absolute top-0 left-0 w-full h-full bg-[#19050688] z-20'></div>
