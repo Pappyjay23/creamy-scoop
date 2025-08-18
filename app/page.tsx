@@ -9,6 +9,7 @@ import gsap from "gsap";
 import AboutUs from "@/components/About Us/AboutUs";
 import OurTaste from "@/components/Our Tastes/OurTaste";
 import Testimonial from "@/components/Testimonial/Testimonial";
+import FAQs from "@/components/FAQs/FAQs";
 
 const App = () => {
 	gsap.registerPlugin(ScrollTrigger);
@@ -24,6 +25,7 @@ const App = () => {
 			<AboutUs />
 			<OurTaste />
 			<Testimonial />
+			<FAQs />
 		</div>
 	);
 };

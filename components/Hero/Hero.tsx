@@ -12,6 +12,7 @@ import HeroIceCream2 from "@/public/images/hero-ice-cream-2.png";
 import HeroIceCream3 from "@/public/images/hero-ice-cream-3.png";
 import HeroIceCream4 from "@/public/images/hero-ice-cream-4.png";
 import { useState } from "react";
+import { Element } from "react-scroll";
 
 const iceCreamCups = [
 	{
@@ -116,10 +117,11 @@ const Hero = () => {
 	});
 
 	return (
-		<section
-			id='hero'
+		<Element
+			name='hero'
+			id="hero"
 			className='min-h-screen text-white bg-fixed bg-cover bg-no-repeat pt-[83px]'
-			style={{ backgroundImage: "url('/images/hero.png')" }}>
+			style={{ backgroundImage: "url('/images/hero.jpg')" }}>
 			<div className='container'>
 				<div className='flex flex-col gap-3 md:flex-row md:justify-between'>
 					<div className='lg:w-[40%] backdrop-blur-sm md:backdrop-blur-none py-3 rounded-[10px]'>
@@ -226,7 +228,7 @@ const Hero = () => {
 					})}
 				</div>
 			</div>
-		</section>
+		</Element>
 	);
 };
 

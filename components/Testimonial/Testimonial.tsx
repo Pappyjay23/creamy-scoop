@@ -2,6 +2,7 @@ import TestimonialImg from "@/public/images/testimonial.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
+import { Element } from "react-scroll";
 
 const Testimonial = () => {
 	useGSAP(() => {
@@ -28,7 +29,7 @@ const Testimonial = () => {
 	});
 
 	return (
-		<div id='our-testimonial' className='bg-[#190506] py-8'>
+		<Element name='our-testimonial' id="our-testimonial" className='bg-[#190506] py-8'>
 			<div className='container'>
 				<div className='flex flex-col items-center text-center py-8'>
 					<p className='text-xl font-fredericka drop-shadow-md'>Our reviews</p>
@@ -44,7 +45,7 @@ const Testimonial = () => {
 					/>
 				</div>
 			</div>
-		</div>
+		</Element>
 	);
 };
 

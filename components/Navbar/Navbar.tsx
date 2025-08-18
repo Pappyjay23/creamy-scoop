@@ -5,11 +5,31 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
+import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { MdRestaurantMenu } from "react-icons/md";
-import { RiMenuFold3Fill } from "react-icons/ri";
+import { Link } from "react-scroll";
 
 const Navbar = () => {
 	const tl = useRef<gsap.core.Timeline | undefined>(undefined);
+
+	const navLinks = [
+		{
+			name: "Our Story",
+			path: "our-story",
+		},
+		{
+			name: "Our Tastes",
+			path: "our-tastes",
+		},
+		{
+			name: "Our Testimonial",
+			path: "our-testimonial",
+		},
+		{
+			name: "FAQs",
+			path: "faqs",
+		},
+	];
 
 	useGSAP(() => {
 		const logo = document.getElementById("logo");
@@ -142,17 +162,20 @@ const Navbar = () => {
 						</div>
 					</a>
 					<div className='flex gap-4 items-center text-xs lg:text-sm nav-links-group overflow-hidden'>
-						<a className='opacity-0 hidden md:block' href='#our-story'>
-							Our Story
-						</a>
-						<a className='opacity-0 hidden md:block' href='#our-tastes'>
-							Our Tastes
-						</a>
-						<a className='opacity-0 hidden md:block' href='#our-testimonial'>
-							Our Testimonial
-						</a>
+						{navLinks.map((link, index) => (
+							<Link
+								key={index}
+								to={link.path}
+								smooth={true}
+								duration={500}
+								offset={-50}
+								spy={true}
+								className='opacity-0 hidden md:block cursor-pointer'>
+								{link.name}
+							</Link>
+						))}
 						<a onClick={toggleMenu} className='cursor-pointer md:hidden'>
-							<RiMenuFold3Fill className='text-[2rem]' />
+							<HiOutlineMenuAlt3 className='text-[1.5rem]' />
 						</a>
 					</div>
 				</div>
@@ -170,36 +193,29 @@ const Navbar = () => {
 					</div>
 				</div>
 				<nav className='flex flex-col gap-5 relative z-40 text-[#fff]'>
-					<div className='[clip-path:polygon(0%_0%,0%_100%,100%_100%,100%_0%)] flex'>
-						<a
-							className='menu-overlay-link capitalize text-[3rem] font-bold tracking-tighter drop-shadow-md'
-							href='#our-story'
-							onClick={(e) => {
-								toggleMenu();
-							}}>
-							Our Story
-						</a>
-					</div>
-					<div className='[clip-path:polygon(0%_0%,0%_100%,100%_100%,100%_0%)]'>
-						<a
-							className='menu-overlay-link capitalize text-[3rem] font-bold tracking-tighter inline-block drop-shadow-md'
-							href='#our-tastes'
-							onClick={(e) => {
-								toggleMenu();
-							}}>
-							Our Tastes
-						</a>
-					</div>
-					<div className='[clip-path:polygon(0%_0%,0%_100%,100%_100%,100%_0%)]'>
-						<a
-							className='menu-overlay-link capitalize text-[3rem] font-bold tracking-tighter inline-block drop-shadow-md'
-							href='#our-testimonial'
-							onClick={(e) => {
-								toggleMenu();
-							}}>
-							Our Testimonial
-						</a>
-					</div>
+					{navLinks.map((link, index) => (
+						<div
+							key={index}
+							className='[clip-path:polygon(0%_0%,0%_100%,100%_100%,100%_0%)]'>
+							<Link
+								key={index}
+								to={link.path}
+								smooth={true}
+								duration={500}
+								offset={-50}
+								spy={true}
+								className='cursor-pointer'>
+								<a
+									className='menu-overlay-link capitalize text-[3rem] font-bold tracking-tighter inline-block drop-shadow-md'
+									href={link.path}
+									onClick={() => {
+										toggleMenu();
+									}}>
+									{link.name}
+								</a>
+							</Link>
+						</div>
+					))}
 				</nav>
 				<div className='absolute top-0 left-0 w-full h-full bg-[#0000004d] z-30 backdrop-blur-[2px]'></div>
 

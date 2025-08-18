@@ -15,8 +15,8 @@ import TasteImg8 from "@/public/images/taste-img-8.png";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import Image from "next/image";
-// import StarImg from "@/public/images/star.png";
 import { useEffect, useMemo, useState } from "react";
+import { Element } from "react-scroll";
 
 const OurTaste = () => {
 	const iceCreamTastes = [
@@ -151,8 +151,9 @@ const OurTaste = () => {
 	}, [currentImageIndex]);
 
 	return (
-		<div
-			id='our-tastes'
+		<Element
+			name='our-tastes'
+			id="our-tastes"
 			className='bg-[#190506] min-h-screen py-12 relative overflow-hidden'>
 			<div className='container z-30 relative'>
 				<div className='flex flex-col items-center text-center py-8'>
@@ -214,7 +215,7 @@ const OurTaste = () => {
 				</div>
 			</div>
 			<div className='absolute top-0 left-0 w-full h-full bg-[#00000074] z-20'></div>
-		</div>
+		</Element>
 	);
 };
 

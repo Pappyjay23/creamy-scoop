@@ -4,6 +4,7 @@ import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import { SplitText } from "gsap/all";
 import gsap from "gsap";
+import { Element } from "react-scroll";
 
 const AboutUs = () => {
 	useGSAP(() => {
@@ -44,11 +45,13 @@ const AboutUs = () => {
 	});
 
 	return (
-		<div id='our-story' className='bg-[#190506] py-8'>
+		<Element name='our-story' id='our-story' className='bg-[#190506] py-8'>
 			<div className='container'>
 				<div className='flex flex-col items-center text-center py-8'>
 					<p className='text-xl font-fredericka drop-shadow-md'>Our story</p>
-					<p className='text-[#E4C2FB] text-2xl md:text-3xl font-fredericka drop-shadow-md'>CreamyScoop</p>
+					<p className='text-[#E4C2FB] text-2xl md:text-3xl font-fredericka drop-shadow-md'>
+						CreamyScoop
+					</p>
 				</div>
 				<div className='flex flex-col lg:flex-row justify-center items-center gap-4'>
 					<p className='w-full lg:w-[50%] font-fredericka leading-[40px] description overflow-hidden'>
@@ -72,7 +75,7 @@ const AboutUs = () => {
 					</div>
 				</div>
 			</div>
-		</div>
+		</Element>
 	);
 };
 

@@ -37,7 +37,7 @@ const Loader = ({
 				className='min-h-screen flex items-center justify-center relative overflow-hidden bg-black'>
 				<div
 					className='absolute top-0 left-0 w-full h-full blur-sm bottom-0 right-0 bg-cover bg-center'
-					style={{ backgroundImage: "url('/images/hero.png')" }}></div>
+					style={{ backgroundImage: "url('/images/hero.jpg')" }}></div>
 				<div className='flex items-center z-10 bg-transparent h-[200px] w-[200px] rounded-full justify-center logoGroup'>
 					<Image
 						src={Logo}
