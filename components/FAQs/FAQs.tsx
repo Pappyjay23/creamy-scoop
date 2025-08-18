@@ -141,11 +141,16 @@ const FAQs = () => {
 									answerRefs.current[index] = el;
 								}}
 								className='mt-4'>
-								<p className='text-xs md:text-sm leading-relaxed'>{faq.answer}</p>
+								<p className='text-xs md:text-sm leading-relaxed'>
+									{faq.answer}
+								</p>
 							</div>
 						</div>
 					))}
 				</div>
+			</div>
+			<div className='absolute bottom-0 left-0 z-30 p-4 flex  justify-center items-center w-full text-xs'>
+				<p>© 2025 Creamy Scoop — Sharing happiness, one scoop at a time.</p>
 			</div>
 			<div className='absolute top-0 left-0 w-full h-full bg-[#19050688] z-20'></div>
 			<video
