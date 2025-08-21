@@ -211,14 +211,13 @@ const Navbar = () => {
 								offset={-50}
 								spy={true}
 								className='cursor-pointer'>
-								<a
+								<span
 									className='menu-overlay-link capitalize text-[3rem] font-bold tracking-tighter inline-block drop-shadow-md'
-									href={link.path}
 									onClick={() => {
 										toggleMenu();
 									}}>
 									{link.name}
-								</a>
+								</span>
 							</Link>
 						</div>
 					))}
