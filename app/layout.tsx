@@ -6,6 +6,7 @@ import {
 	Pacifico,
 } from "next/font/google";
 import "./globals.css";
+import ReactLenis from "lenis/react";
 
 const poppins = Poppins({
 	variable: "--font-poppins",
@@ -49,13 +50,13 @@ export default function RootLayout({
 		<html lang='en'>
 			<body
 				className={`
-          ${poppins.variable}
-          ${fredericka.variable}
-          ${fredoka.variable}
-          ${pacifico.variable}
-          antialiased
-        `}>
-				{children}
+						${poppins.variable}
+						${fredericka.variable}
+						${fredoka.variable}
+						${pacifico.variable}
+						antialiased
+						`}>
+				<ReactLenis root>{children}</ReactLenis>
 			</body>
 		</html>
 	);
